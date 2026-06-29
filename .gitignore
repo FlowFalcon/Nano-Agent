@@ -1,0 +1,27 @@
+# --- Secrets & local config (JANGAN pernah di-commit) ---
+config.json
+.env
+.env.*
+
+# --- Memori privat & data runtime agen ---
+workspace/
+schedules.json
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Artefak build / arsip ---
+*.zip
+
+# --- OS / editor ---
+.DS_Store
+*.swp
+.idea/
+.vscode/

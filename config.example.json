@@ -1,0 +1,58 @@
+{
+  "runtime": {
+    "auto_detect": true,
+    "profile": "auto",
+    "first_run_mode": "auto",
+    "continue_after_wizard": true
+  },
+  "system": {
+    "log_level": "INFO",
+    "allow_shell_exec": true,
+    "exec_approval_mode": "approval",
+    "exec_allowed_commands": [
+      "pwd",
+      "ls",
+      "python --version"
+    ],
+    "exec_blocked_commands": [],
+    "allow_file_edit": true,
+    "workspace_dir": "workspace/agent",
+    "max_file_size_mb": 50,
+    "allow_file_send": true,
+    "max_send_file_size_mb": 50
+  },
+  "telegram": {
+    "bot_token": "",
+    "allowed_user_ids": [
+      123456789
+    ],
+    "stream_delay_seconds": 1.5,
+    "enable_private_draft_streaming": true,
+    "mode": "polling",
+    "webhook_host": "0.0.0.0",
+    "webhook_port": 8080,
+    "webhook_path": "/webhook",
+    "webhook_url": "",
+    "unauthorized_message": "This bot is only available to allowed owner users."
+  },
+  "llm": {
+    "context_window_tokens": 16000,
+    "summarization_threshold_tokens": 4000,
+    "max_iterations": 20,
+    "providers": [
+      {
+        "priority": 1,
+        "name": "openrouter",
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key": "",
+        "model": "anthropic/claude-3.5-sonnet",
+        "models": [],
+        "wire_format": "openai",
+        "extra_body": {}
+      }
+    ]
+  },
+  "mcp": {
+    "servers": []
+  }
+}

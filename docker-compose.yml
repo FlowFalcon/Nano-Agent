@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  agent:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./config.json:/app/config.json
+      - ./workspace:/app/workspace
+    ports:
+      - "8080:8080" # Only needed if running in webhook mode
+    environment:
+      - AGENT_CONFIG_PATH=/app/config.json
